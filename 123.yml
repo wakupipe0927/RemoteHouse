@@ -1,0 +1,103 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  mode: chat
+  name: '123'
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/openai_api_compatible:0.0.16@d41b09aca46cdd3876f70b4c91d464c4588fc0bdc844ced6ee426283ead6ce8e
+kind: app
+model_config:
+  agent_mode:
+    enabled: false
+    max_iteration: 10
+    strategy: react
+    tools: []
+  annotation_reply:
+    enabled: false
+  chat_prompt_config: {}
+  completion_prompt_config: {}
+  dataset_configs:
+    datasets:
+      datasets:
+      - dataset:
+          enabled: true
+          id: 9645316e-bffa-4b25-a635-0f448feb9879
+    reranking_enable: false
+    reranking_mode: reranking_model
+    reranking_model:
+      reranking_model_name: bge-reranker-v2-m3
+      reranking_provider_name: langgenius/openai_api_compatible/openai_api_compatible
+    retrieval_model: multiple
+    top_k: 4
+  dataset_query_variable: ''
+  external_data_tools: []
+  file_upload:
+    allowed_file_extensions:
+    - .JPG
+    - .JPEG
+    - .PNG
+    - .GIF
+    - .WEBP
+    - .SVG
+    - .MP4
+    - .MOV
+    - .MPEG
+    - .WEBM
+    allowed_file_types: []
+    allowed_file_upload_methods:
+    - remote_url
+    - local_file
+    enabled: false
+    image:
+      detail: high
+      enabled: false
+      number_limits: 3
+      transfer_methods:
+      - remote_url
+      - local_file
+    number_limits: 3
+  model:
+    completion_params:
+      stop: []
+    mode: chat
+    name: Qwen2_5-72B-Instruct
+    provider: langgenius/openai_api_compatible/openai_api_compatible
+  more_like_this:
+    enabled: false
+  opening_statement: '你好呀！我是钓鱼大师PhishMaster！现在让我们玩个有趣的互动游戏——
+
+    想想你生活中需要法律援助的情景，我来帮你搭建细节，我们一起“进入”故事里！
+
+    如果想不到的话，你可以直接选下面的推荐场景！'
+  pre_prompt: "```xml\n<instruction>\n    1. 根据用户的回答，生成一个相关生活场景，该场景应包含潜在的冲突，需要用到法律。\n\
+    \    2. 为这个场景提供至少两个选择项，让用户选择。\n    3. 根据用户的选择，生成一个新的场景描述，继续包含冲突成分。\n    4. 再次提供至少两个新的选择项给用户。\n\
+    \    5. 根据用户的选择，提供进一步的情景发展。这样的对话共进行六轮。\n    6. 最后一轮选择结束后，不再给出选项，进行一次与场景相关的普法教育，需要有法律条规。\n\
+    \    7. 整个过程中的输出不应包含任何XML标签。\n"
+  prompt_type: simple
+  retriever_resource:
+    enabled: true
+  sensitive_word_avoidance:
+    configs: []
+    enabled: false
+    type: ''
+  speech_to_text:
+    enabled: false
+  suggested_questions:
+  - 劳务关系
+  - 消费纠纷
+  - 食品安全
+  - 交通事故
+  - 房产买卖
+  suggested_questions_after_answer:
+    enabled: false
+  text_to_speech:
+    enabled: false
+    language: ''
+    voice: ''
+  user_input_form: []
+version: 0.3.0
